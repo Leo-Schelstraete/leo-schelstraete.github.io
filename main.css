@@ -2,7 +2,8 @@
 
 body {
   max-width: 1000px;
-  margin: 16px;
+  margin: auto;
+  padding: 16px;/* inner spacing on all screens */
   font-family: 'Tahoma';/*Source Sans Pro*/
   text-align: justify;
   font-weight: 300;
