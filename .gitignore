@@ -1,0 +1,4 @@
+.DS_Store
+
+# local full-size copy of the profile photo (the original is also in git history)
+files/photo-original.jpg

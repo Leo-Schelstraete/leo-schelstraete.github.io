@@ -1,0 +1,90 @@
+Conferences attended — removed from talks.html on 2026-09-21, kept here as raw
+HTML so the section can be pasted back into the page if wanted. This file is not
+served as a page and is not linked from anywhere.
+
+      <h2>Conferences attended</h2>
+
+      <h3>2026</h3>
+      <ul class="entries">
+        <li>
+          <em class="title"><a href="https://sites.google.com/view/reptensor">Tensor categories in representation theory &amp; vice versa</a></em>
+          <span class="meta">Uppsala universitet, 24-27 August 2026</span>
+        </li>
+      </ul>
+
+      <h3>2024</h3>
+      <ul class="entries">
+        <li>
+          <em class="title"><a href="https://lrobert.perso.math.cnrs.fr/BTW4/btw4.html">BTW4: Heegaard–Floer homology</a></em>
+          <span class="meta">Besse, February 2024</span>
+        </li>
+        <li>
+          <em class="title"><a href="https://www.jointmathematicsmeetings.org/meetings/national/jmm2024/2300_program_ss66.html">JMM 2024: Special Session on Knots, Skein Modules, and Categorification</a></em>
+          <span class="meta">San Francisco, January 2024</span>
+        </li>
+      </ul>
+
+      <h3>2023</h3>
+      <ul class="entries">
+        <li>
+          <em class="title"><a href="https://sites.google.com/view/geometric-and-categorical-lms/home">LMS-Bath Summer School on Geometric and Categorical Representation theory</a></em>
+          <span class="meta">Bath, August 2023</span>
+        </li>
+        <li>
+          <em class="title"><a href="https://indico.math.cnrs.fr/event/8713/">Hecke algebras and applications</a></em>
+          <span class="meta">Spetses, July 2023</span>
+        </li>
+        <li>
+          <em class="title"><a href="https://sites.google.com/view/matemale-maths-school/home">Workshop on Seiberg-Witten theory</a></em>
+          <span class="meta">Matemale, June 2023</span>
+        </li>
+        <li>
+          <em class="title"><a href="https://winterbraids.math.cnrs.fr/">Winter Braids XII</a></em>
+          <span class="meta">Tours, February 2023</span>
+        </li>
+        <li>
+          <em class="title"><a href="https://lrobert.perso.math.cnrs.fr/BTW3/btw3.html">BTW3: Morse and Floer theories</a></em>
+          <span class="meta">Marseille, January 2023</span>
+        </li>
+      </ul>
+
+      <h3>2022</h3>
+      <ul class="entries">
+        <li>
+          <em class="title"><a href="https://www.la-matrice.ch/climathics-workshop">Climathics</a></em>
+          <span class="meta">Les Diablerets, November 2022</span>
+        </li>
+        <li>
+          <em class="title"><a href="https://conferences.leeds.ac.uk/bcqt2022/">Research School on Bicategories, Categorification and Quantum Theory</a></em>
+          <span class="meta">Leeds, July 2022</span>
+        </li>
+        <li>
+          <em class="title"><a href="https://www.nccr-swissmap.ch/news-and-events/events/subfactors-quantum-topology-memory-vaughan-jones?occurrenceID=974">From Subfactors to Quantum Topology - In memory of Vaughan Jones</a></em>
+          <span class="meta">Geneva, June 2022</span>
+        </li>
+        <li>
+          <em class="title"><a href="https://www.mathconf.org/qtg2022">Quantum Topology and Geometry: conference in honor of Vladimir Turaev</a></em>
+          <span class="meta">Paris, June 2022</span>
+        </li>
+        <li>
+          <em class="title"><a href="https://lrobert.perso.math.cnrs.fr/BTW2/btw2.html">BTW2: Sliceness, exotic pairs, and quantum invariants</a></em>
+          <span class="meta">Aussois, April 2022</span>
+        </li>
+        <li>
+          <em class="title"><a href="https://lrobert.perso.math.cnrs.fr/SRS/srs.html">Recent developments in Link Homology</a></em>
+          <span class="meta">Les Diablerets, January 2022</span>
+        </li>
+      </ul>
+
+      <h3>2021</h3>
+      <ul class="entries">
+        <li>
+          <em class="title"><a href="https://winterbraids.math.cnrs.fr/archives/winterbraids11/">Winter braids XI</a></em>
+          <span class="meta">Dijon, December 2021</span>
+        </li>
+        <li>
+          <em class="title"><a href="https://cbz20.raspberryip.com/Perspectives-2021/">Perspectives on quantum link homology theories (student workshop)</a></em>
+          <span class="meta">Regensburg, August 2021</span>
+        </li>
+      </ul>
+

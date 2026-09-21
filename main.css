@@ -1,195 +1,389 @@
-@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900,300italic");
+:root {
+  --bg:    #ffffff;
+  --text:  #1f2328;
+  --muted: #6b7280;
+  --link:   #1f2328;  /* ink: links read by their underline, not by colour */
+  --accent: #a8410a;  /* ocre, from the paper preamble, darkened to clear AA on --bg */
+  --rule:   #e5e2db;
+  --tint:   #f1efe9;  /* chip hover */
+}
 
 body {
-  max-width: 1000px;
-  margin: auto;
-  padding: 16px;/* inner spacing on all screens */
-  font-family: 'Tahoma';/*Source Sans Pro*/
-  text-align: justify;
-  font-weight: 300;
-  color: #5d5d5d;
-  font-size: 14pt;
-  line-height: 1.75em;
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  font-size: 1.0625rem;
+  line-height: 1.65;
 }
 
-/* <b> is for bold (<strong> is for important text: usually same as bold) */
-strong, b {
-  color: #252122;
-  font-weight: 700;
+/* Centred column, shared by the nav bar and the page body */
+.wrap {
+  max-width: 44rem;
+  margin: 0 auto;
+  padding: 0 1.25rem;
 }
 
-/* <em> is for italic (<i> is aside text: usually same as italic) */
-i, em {
-  font: inherit;
-  font-style: italic;
-}
-
-/* subscript */
-sub {
-  position: relative;
-  top: 0.5em;
-  font-size: 0.8em;
-}
-
-/* superscript */
-sup {
-  position: relative;
-  top: -0.5em;
-  font-size: 0.8em;
-}
-
-blockquote {
-  border-left: solid 0.75em #dddddd;
-  padding: 1em 0 1em 1.5em;
-  font-style: italic;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  color: #252122;
-  font-weight: 700;
-}
-
-h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
-  color: inherit;
-  text-decoration: none;
-}
-
-h2 {
-  font-size: 1.5em;
-}
-
-h3 {
-  font-size: 1.35em;
-}
-
-/* hyperlink */
 a {
-  color: #d52349;
+  color: var(--link);
   text-decoration: underline;
+  text-underline-offset: 2px;
 }
-a:hover {
-  text-decoration: none;
+a:hover { color: var(--accent); }
+
+h1, h2, h3 {
+  line-height: 1.25;
+  font-weight: 600;
 }
+h1 { font-size: 1.75rem; margin: 0 0 0.2rem; }
+h2 { font-size: 1.25rem; margin: 2.75rem 0 0.75rem; }
+h3 { font-size: 1rem; margin: 1.75rem 0 0.5rem; }
 
-/* horizontal line */
-hr {
-  border: 0;
-  border-top: solid 1px #dddddd;
-  height: 1px;
-  margin: 2em 0 2em 0;
+p { margin: 0 0 1rem; }
+
+/* Secondary text: dates, venues, affiliations */
+.meta {
+  color: var(--muted);
+  font-size: 0.9375rem;
 }
-
-/* paragraph, unordered list, ordered list, description list, table */
-p, ul, ol, dl, table {
-  margin-bottom: 2em;
-}
-
-
-/* Header */
-
-#header {
-  position: relative;
-  background: #ffffff;
-  /* border-bottom: solid 1px #ccc; */
-  padding: 5em 0 4em 0;
-  text-align: center;
-}
-
-  #header h1 {
-    color: #252122;
-    font-weight: 900;
-    font-size: 2.5em;
-    letter-spacing: -0.01em;
-    line-height: 0;
-  }
-
 
 /* Nav */
 
-#nav {
-  margin: 2.5em 0 0 0;
+.nav { border-bottom: 1px solid var(--rule); }
+
+.nav .wrap {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.4rem 1.5rem;
+  padding-top: 1.4rem;
+  padding-bottom: 1.4rem;
 }
 
-  #nav > ul {
-    margin: 0;
-  }
+.nav-brand {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+  min-width: 0;
+}
 
-    #nav > ul > li {
-      display: inline-block;
-      font-style: italic;
-      margin: 0 0.35em 0 0.35em;
-    }
+.nav-name {
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  white-space: nowrap;
+}
 
-      #nav > ul > li > ul {
-        display: none;
-      }
+/* Role sits beside the name, quiet enough not to read as a second link */
+.nav-role {
+  color: var(--muted);
+  font-size: 0.875rem;
+}
 
-      #nav > ul > li > a {
-        border-radius: 5px;
-        color: #5d5d5d;
-        text-decoration: none;
-        padding: 0.6em 1.2em 0.6em 1.2em;
-        -moz-transition: background-color .25s ease-in-out;
-        -webkit-transition: background-color .25s ease-in-out;
-        -ms-transition: background-color .25s ease-in-out;
-        transition: background-color .25s ease-in-out;
-        outline: 0;
-      }
+.nav-role::before {
+  content: "·";
+  margin-right: 0.6rem;
+}
 
-      #nav > ul > li:hover > a, #nav > ul > li.active > a {
-        background: #f3f3f3;
-      }
-
-      #nav > ul > li.current > a {
-        background: #d52349;
-        color: #fff !important;
-        font-weight: 700;
-      }
-
-/* .dropotron {
-  border-radius: 5px;
-  background-color: #252122;
-  background-color: rgba(34, 30, 31, 0.98);
-  padding: 1.25em 1.5em 1.25em 1.5em;
-  font-style: italic;
-  min-width: 13em;
-  box-shadow: 0px 8px 15px 0px rgba(0, 0, 0, 0.5);
-  text-align: left;
-  margin-top: -1.25em;
-  margin-left: -1px;
+.nav-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
   list-style: none;
 }
 
-  .dropotron a, .dropotron span {
-    color: #aaa;
-    text-decoration: none;
-    -moz-transition: color .25s ease-in-out;
-    -webkit-transition: color .25s ease-in-out;
-    -ms-transition: color .25s ease-in-out;
-    transition: color .25s ease-in-out;
+.nav-links a {
+  color: var(--muted);
+  text-decoration: none;
+  padding-bottom: 2px;
+}
+.nav-links a:hover { color: var(--text); }
+
+.nav-links a[aria-current="page"] {
+  color: var(--text);
+  border-bottom: 2px solid var(--accent);
+}
+
+.page { padding: 2.75rem 0 4rem; }
+
+/* About: bio first, photo in the right-hand column */
+
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 200px;
+  gap: 1.75rem;
+  align-items: start;
+}
+
+.intro-photo {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* Contact line sits under the intro grid, spanning the full column */
+.contact { margin: 1.75rem 0 0; }
+
+.contact .address {
+  margin-left: 0.5rem;
+  font-style: italic;
+}
+
+/* Research interests: figure in the left column, scaled to the height of the text */
+.research {
+  display: grid;
+  grid-template-columns: 7rem 1fr;
+  gap: 1.5rem;
+}
+
+/* Fills the height of the text column; object-fit keeps the figure's proportions */
+.research-figure {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: left top;
+}
+
+.research-text > p:last-child { margin-bottom: 0; }
+
+/* Profile links as labelled chips, matching the ones on the publications page */
+.profile-links {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1.4rem;
+}
+
+.profile-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.3em 0.65em;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  color: var(--link);
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+.profile-links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--tint);
+}
+
+.profile-links img {
+  display: block;
+  height: 1.15rem;
+  width: auto;
+}
+
+/* Entry lists: title on one line, venue and links beneath.
+   Used for both publications (.pubs) and talks (.talks). */
+
+.entries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.entries .meta { display: block; }
+
+.entries .title {
+  display: block;
+  font-weight: 600;
+  color: var(--text);
+}
+
+/* a list straight after the page title needs breathing room */
+h1 + .entries { margin-top: 1.5rem; }
+
+.pubs > li { margin-bottom: 1.5rem; }
+.talks > li { margin-bottom: 1rem; }
+
+/* Kicker: journal citation when published, the kind of work otherwise */
+.pubs .venue {
+  display: block;
+  font-size: 0.8125rem;
+  color: var(--muted);
+}
+/* Ocre marks a published venue; italic carries the same cue without colour */
+.pubs .journal {
+  color: var(--accent);
+  font-style: italic;
+}
+
+.pubs .authors {
+  display: block;
+  color: var(--muted);
+  font-size: 0.9375rem;
+}
+
+.abstract {
+  margin: 0.6rem 0 0;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--rule);
+  font-size: 0.9375rem;
+  color: var(--muted);
+}
+
+/* Chronological numbering: [1] is the oldest, so <ol reversed> counts down */
+.pubs.numbered > li {
+  position: relative;
+  padding-left: 2.6rem;
+}
+
+.pubs.numbered > li::before {
+  content: "[" counter(list-item) "]";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-variant-numeric: tabular-nums;
+}
+
+/* Chips: links to material, plus the abstract toggle */
+
+.chips {
+  display: block;
+  margin-top: 0.4rem;
+}
+
+.chip {
+  display: inline-block;
+  margin-right: 0.35rem;
+  padding: 0.05em 0.5em;
+  border: 1px solid var(--rule);
+  border-radius: 3px;
+  color: var(--link);
+  font-size: 0.8125rem;
+  text-decoration: none;
+}
+.chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: var(--tint);
+}
+
+/* the abstract chip is a button, so it needs the text styling reset */
+button.chip {
+  font-family: inherit;
+  line-height: inherit;
+  background: none;
+  cursor: pointer;
+}
+
+/* caret showing which way the abstract will fold */
+.chip[aria-expanded]::after { content: " \25b8"; }
+.chip[aria-expanded="true"]::after { content: " \25be"; }
+
+/* Ocre marks something you can actually open — a journal version, or the
+   slides/notes/poster of a talk; the glyph carries the cue again for
+   readers who do not see the colour */
+.chip-journal,
+.chip-slides,
+.chip-notes,
+.chip-poster {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+.chip-slides::before,
+.chip-notes::before,
+.chip-poster::before {
+  margin-right: 0.35em;
+}
+.chip-slides::before { content: "\25a4"; }   /* ▤ slides */
+.chip-notes::before  { content: "\270e"; }   /* ✎ notes  */
+.chip-poster::before { content: "\25a7"; }   /* ▧ poster */
+
+/* Talks: year headings act as dividers down the list, so the page reads as
+   a timeline rather than one unbroken run of entries */
+.year {
+  margin: 2rem 0 0.75rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+/* Older talks stay on the page but folded, so the recent years lead */
+.more {
+  margin: 2.25rem 0 0;
+  border-top: 1px solid var(--rule);
+  padding-top: 0.9rem;
+}
+
+.more > summary {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.25rem;
+  padding: 0.3rem 0.6rem;
+  margin-left: -0.6rem;
+  border-radius: 3px;
+  color: var(--text);
+  font-size: 1rem;
+  font-weight: 600;
+  list-style: none;
+  cursor: pointer;
+}
+.more > summary:hover { background: var(--tint); }
+.more > summary::-webkit-details-marker { display: none; }
+
+.more > summary::before {
+  content: "\25b8";
+  color: var(--accent);
+  font-size: 0.875em;
+}
+.more[open] > summary::before { content: "\25be"; }
+
+/* count keeps its quieter weight, so the label still leads */
+.more .count {
+  color: var(--muted);
+  font-size: 0.9375rem;
+  font-weight: 400;
+}
+
+/* first year heading inside the fold should not double the top gap */
+.more > .year:first-of-type { margin-top: 1.25rem; }
+
+/* Dated lists: date on the left, item on the right (news) */
+
+.dated {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.dated > li {
+  display: grid;
+  grid-template-columns: 10.5rem 1fr;
+  gap: 0 1rem;
+  margin-bottom: 0.9rem;
+}
+
+/* Narrow screens: two-column layouts collapse to one */
+@media (max-width: 34rem) {
+  .nav-role { display: none; }
+
+  .intro { grid-template-columns: 1fr; }
+  /* photo back above the bio when the columns collapse */
+  .intro-photo { order: -1; max-width: 200px; }
+
+  /* the figure would crowd the text, so stack it above at a fixed size */
+  .research { display: block; }
+  .research-figure {
+    display: block;
+    height: 9rem;
+    margin: 0 0 1rem;
   }
 
-  .dropotron li {
-    padding: 0.25em 0 0.25em 0;
-  }
-
-    .dropotron li:hover > a, .dropotron li:hover > span {
-      color: #fff;
-    }
-
-  .dropotron.level-0 {
-    margin-top: 2em;
-  }
-
-    .dropotron.level-0:before {
-      content: '';
-      display: block;
-      position: absolute;
-      left: 50%;
-      margin-left: -10px;
-      top: -9px;
-      border-left: solid 10px transparent;
-      border-right: solid 10px transparent;
-      border-bottom: solid 10px #252122;
-      border-bottom-color: rgba(34, 30, 31, 0.98);
-    } */
+  .dated > li { grid-template-columns: 1fr; gap: 0.1rem; }
+  .pubs.numbered > li { padding-left: 2.2rem; }
+}

@@ -1,280 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Léo Schelstraete</title>
-  <meta charset="utf-8"/>
+  <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="main.css" />
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-  <script>
-    MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']]
-      }
-    };
-    </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <title>Léo Schelstraete</title>
+  <meta name="description" content="Léo Schelstraete, postdoctoral researcher in mathematics.">
+  <link rel="stylesheet" href="main.css">
 </head>
 
 <body>
 
-  <header id="header">
-    <h1>
-      Léo Schelstraete
-    </h1>
-    <p>
-      Researcher in mathematics
-    </p>
-    
-    <!-- Nav -->
-    <!-- <nav id="nav">
-      <ul>
-        <li class="current"><a href="index.html">About me</a></li>
-        <li><a href="left-sidebar.html">Research</a></li>
-        <li><a href="right-sidebar.html">Talks</a></li>
-        <li><a href="no-sidebar.html">Travel</a></li>
+  <nav class="nav">
+    <div class="wrap">
+      <div class="nav-brand">
+        <a class="nav-name" href="index.html">Léo Schelstraete</a>
+        <span class="nav-role">Researcher in mathematics</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html" aria-current="page">about</a></li>
+        <li><a href="publications.html">publications</a></li>
+        <li><a href="talks.html">talks</a></li>
       </ul>
-    </nav> -->
-    <p>
-      <a
-      href="https://orcid.org/0000-0001-7167-3964">
-      <img
-          src="files/logos/ORCID-iD_icon_vector.svg"
-          style="height: 3em; margin-inline-start: 0.5em; margin-right: 1em;"
-          alt="ORCID iD logo"
-          >
-      </a>
-      <a
-        href="https://arxiv.org/a/schelstraete_l_1.html">
-      <img
-        src="files/logos/arxiv-logomark-small.svg"
-        style="height: 3em; margin-inline-start: 0.5em;
-        margin-left: 1em;margin-right: 1em;"
-        alt="arxiv logo"
-        >
-      </a>
-      <a
-        href="https://scholar.google.com/citations?user=fEg7OsQAAAAJ&hl=en">
-      <img
-        src="files/logos/Google_Scholar_logo.svg"
-        style="height: 3em; margin-inline-start: 0.5em;
-        margin-left: 1em;"
-        alt="Google scholar logo"
-        >
-      </a>
-    </p>
-  </header>
+    </div>
+  </nav>
 
-<!-- <p><b>I'm currently looking for a job! Contact me for application material.</b></p> -->
+  <main class="page">
+    <div class="wrap">
 
-<p>
-  <img src="files/photo.jpg"
-    alt="Léo Schelstraete"
-    style="width:260px; height:auto; margin-right:15px;
-    margin-bottom: 30px;
-    float:left;clear:left;"
-    >
-  I am a postdoctoral fellow at the Max Planck Institute for Mathematics (Bonn, Germany). My mentor is Catharina Stroppel.
-  <br>
-  Previously, I was a graduate student at the UCLouvain (Belgium), working under the supervision of <a href="https://perso.uclouvain.be/pedro.vaz">Pedro Vaz</a>. I received my PhD in September 2024.
+      <div class="profile-links">
+        <a href="https://orcid.org/0000-0001-7167-3964">
+          <img src="files/logos/ORCID-iD_icon_vector.svg" alt="">
+          <span>ORCID</span>
+        </a>
+        <a href="https://arxiv.org/a/schelstraete_l_1.html">
+          <img src="files/logos/arxiv-logomark-small.svg" alt="">
+          <span>arXiv</span>
+        </a>
+        <a href="https://scholar.google.com/citations?user=fEg7OsQAAAAJ&amp;hl=en">
+          <img src="files/logos/Google_Scholar_logo.svg" alt="">
+          <span>Google Scholar</span>
+        </a>
+      </div>
 
-  <br><br>
+      <div class="intro">
+        <div>
+          <p>
+            Starting 1 October 2026, I will be a postdoctoral researcher at Cergy Paris Université (France) in the group of <a href="https://jmartel.perso.math.cnrs.fr/">Jules Martel</a>.
+          </p>
 
-  You can find a list of my arXiv preprints <a href="https://arxiv.org/a/schelstraete_l_1.html">here</a>.
+          <p>
+            Previously, I was a postdoctoral fellow at the Max Planck Institute for Mathematics (Bonn, Germany) in the group of <a href="https://www.math.uni-bonn.de/ag/stroppel/">Catharina Stroppel</a>. Before that, I was a graduate student at the UCLouvain (Belgium), working under the supervision of <a href="https://perso.uclouvain.be/pedro.vaz">Pedro Vaz</a>. I received my PhD in September 2024.
+          </p>
+        </div>
 
-  <br><br>
+        <img class="intro-photo" src="files/photo.jpg" alt="Léo Schelstraete">
+      </div>
 
-  <b>Contact:</b> lastname(at)mpim-bonn.mpg.de (lastname=schelstraete)<br>
+      <p class="contact">
+        ✉️ e-mail address: <span class="address">schelstraete@mpim-bonn.mpg.de</span>
+      </p>
 
-  
-</p>
+      <h2>Research interests</h2>
+      <div class="research">
+        <img class="research-figure" src="files/squeezing.svg" alt="">
+        <div class="research-text">
+          <p>
+            Broadly speaking, my research lies in low-dimensional topology, representation theory and category theory.
+            One part of my research is in quantum topology and categorification; another part, related to the first one, is about computation and higher structures in diagrammatic algebras.
+          </p>
+          <p>
+            <em>Keywords:</em> Khovanov homology, quantum groups, super Lie algebras, KLR algebras, monoidal categories, string diagrams, rewriting theory, Gröbner bases and diamond lemma.
+          </p>
+        </div>
+      </div>
 
-<br>
-<h3 style="clear:left;">
-  News
-</h3>
-<i>Last update:</i> June 07 2026
+      <h2>News</h2>
+      <p class="meta">Last update: 21 September 2026</p>
+      <!-- Newest first. Date on the left, item on the right. -->
+      <ul class="dated">
+        <li>
+          <span class="meta">1 October 2026</span>
+          <span>I am starting as a postdoctoral researcher at Cergy Paris Université, in the group of <a href="https://jmartel.perso.math.cnrs.fr/">Jules Martel</a>.</span>
+        </li>
+        <li>
+          <span class="meta">11 September 2026</span>
+          <span>My article <em>Odd Khovanov homology and higher representation theory</em>, joint with Pedro Vaz, has been published in <a href="https://doi.org/10.4171/QT/266">Quantum Topology</a>!</span>
+        </li>
+        <li>
+          <span class="meta">18 August 2026</span>
+          <span>My article <em>Rewriting modulo in diagrammatic algebras and application to categorification</em> has been published in <a href="https://doi.org/10.1016/j.aim.2026.111198">Advances in Mathematics</a>!</span>
+        </li>
+      </ul>
 
-<ul>
-  <li>
-    Upcoming travel:
-    <ul>
-      <li><a href="https://sites.google.com/view/reptensor">Tensor categories in representation theory & vice versa</a>, Uppsala universitet, 24-27 August 2026</li>
-    </ul>
-  </li>
-</ul>
+    </div>
+  </main>
 
+</body>
 
-<!-- RESEARCH INTERESTS -->
-<h3 style="clear:left;">
-  Research interests
-</h3>
-<!-- <p style="font-style: bold; font-size: 18pt;">
-  Low-dimensional topology &bull; Categorification &bull; Quantum groups
-</p> -->
-<p>
-  <em>Fields:</em> low-dimensional topology, representation theory and category theory
-  <br><br>
-  <em>Keywords:</em> categorification, Khovanov homology, quantum groups, diagrammatic algebras, rewriting theory (e.g. Gröbner bases and diamond lemma).
-</p>
-<!-- Wiggly divider using SVG (shorter length, centered) -->
-<div style="display: flex; justify-content: center; margin: 1em 0;">
-  <svg width="120" height="8" viewBox="0 0 100 8" preserveAspectRatio="none">
-    <path d="M0,4 Q10,0 20,4 T40,4 T60,4 T80,4 T100,4" fill="transparent" stroke="#888" stroke-width="2"/>
-  </svg>
-</div>
-<p>
-  On the one hand, I study quantum invariants of knots related to the representation theory of quantum groups. Both sides can be categorified: as homological invariants for the former (e.g. Khovanov homology) and as diagrammatic algebras for the latter (e.g. KLR algebras). I am interested in their interaction as well as their connection with various other fields. My recent research has focused on the "oddification" of this story; intuitively, moving form commutativity to <em>anti</em>-commutativity. This features <em>odd</em> Khovanov homology on the topological side, and <em>super</em> algebraic structures on the representation theoretic side, as in <a href=" 	
-    https://doi.org/10.48550/arXiv.2311.14394">2311.14394</a>.
-</p>
-<p>
-  On the other hand, I am interested in rewriting theory (the algorithmic study of presented algebraic structures) and its applications to diagrammatic algebras, categorification and quantum topology. In arXiv:<a href=" 	
-    https://doi.org/10.48550/arXiv.2502.03028">2502.03028</a>, I developed a theory of higher linear rewriting, sufficiently flexible to deal with diagrammatic algebras as they appear in practice; one may think of it as a higher notion of Gröbner bases, or as a higher notion of Bergman's diamond lemma. In the same work, I applied the theory to a basis problem appearing in quantum topology. I am currenctly working in extending the realm of applicability of the theory.
-</p>
-
-<h3>
-  Publications and preprints
-</h3>
-Preprints:
-<ul>
-  <li><em>A local $\mathfrak{gl}_{1|1}$-action on odd Khovanov homology</em>, joint with Mark Ebert, arXiv:<a href="https://arxiv.org/abs/2511.00947">2511.00947</a>
-    </li>
-  <li>
-    <em>A basis and Schur–Weyl duality for the loop Hecke algebra</em>, joint with Geoffrey Janssens, Abel Lacabanne and Pedro Vaz, arXiv:<a href="https://doi.org/10.48550/ 	arXiv:2507.12839">2507.12839</a>
-  </li>
-  <li>
-    <em>Rewriting modulo in diagrammatic algebras and application to categorification</em>, arXiv:<a href=" 	
-    https://doi.org/10.48550/arXiv.2502.03028">2502.03028</a>, submitted
-  </li>
-  <li>
-    <em>Odd khovanov homology and higher representation theory</em>, joint with Pedro Vaz, arXiv:<a href=" 	
-    https://doi.org/10.48550/arXiv.2311.14394">2311.14394</a>, submitted (see <a href="files/OKh-and-HRT-v3.pdf">here</a> for a more up-to-date version)
-    <br>
-</ul>
-
-Thesis:
-<ul>
-  <li>
-    <em>Odd khovanov homology, higher representation theory and higher rewriting theory</em>, arXiv:<a href="https://doi.org/10.48550/arXiv.2410.11405">2410.11405</a>, 2024, PhD thesis
-  </li>
-  <li>
-    <em> Supercategorification and Khovanov-like tangle invariants</em>, 2020, Master Thesis, available <a href=https://dial.uclouvain.be/memoire/ucl/en/object/thesis%3A24138>here</a>
-  </li>
-</ul>
-
-
-
-<!-- TALKS -->
-<h3>
-  Talks
-</h3>
-<h4>
-  Research talks
-</h4>
-<ul>
-  <li>
-    <em>How to solve the word problem in diagrammatic algebras?</em>, <a href="https://bms.ulb.ac.be/conferences/bms-kwg-sml-joint-meeting/">BeNeLux Mathematical Congress</a>, Anvers, 7-8 April 2026
-  </li>
-  <li>
-    <em>Odd Khovanov homology and extended TQFTs</em>, Durham, January 2026
-  </li>
-  <li>
-    <em>The word problem in monoidal categories and categorification</em>, <a href="https://sites.google.com/view/categorificationuea2026/home">Mini-conference: Categorification</a>, East Anglia University, Norwich, January 2026
-  </li>
-  <li>
-    <em>A new approach to odd Khovanov homology</em>, <a href="https://sites.google.com/view/berlin-brandenburg-workshop-vi/home">Berlin-Brandenburg workshop</a>, Berlin Universität, December 2025 (<a href="files/25.12 Berlin.pdf">slides</a>)
-  </li>
-  <li>
-    <em>A basis and Schur–Weyl duality for the loop Hecke algebra</em>, Séminaire de Topologie, Université de Paris, November 2025
-  </li>
-  <li>
-    <em>Le problème du mot dans les algèbres diagrammatiques et applications</em>, Séminaire "Algèbre, Représentations, Topologie", Université de Strasbourg, November 2025
-  </li>
-  <li>
-    <em>Réécriture linéaire supérieure dans les algèbres diagrammatiques</em>, Lyon, June 26
-    </li>
-  <li>
-    <em>A novel approach to odd Khovanov homology</em>, Hamburg, May 22
-    </li>
-  <li>
-    <em>Rewriting methods in diagrammatic algebras</em>, Tallinn, April 7-11
-  </li>
-  <li>
-    <em>Rewriting in diagrammatic algebras</em>, Bonn, December 2024
-  </li>
-  <li>
-    <em>Oddification, de la théorie des représentations à la topologie</em>, Marseille, November 14 2024
-  </li>
-  <li>
-    <em>Réécriture en algèbre supérieure et applications</em>, Montpellier, November 13 2024
-  </li>
-  <li>
-    <em>Oddification, from representation theory to topology</em>, Bochum, November 7 2024
-  </li>
-  <li>
-    <em>A novel approach to odd Khovanov homology</em>, Max Planck Institute of Mathematics, low-dimensional topology seminar, October 22 2024
-  </li>
-  <li>
-    <em>Oddification, from representation theory to topology</em>, University of Bonn, algebra seminar, October 11 2024
-  </li>
-  <li>
-    <em>Odd Khovanov homology and higher representation theory</em>,
-    Clermont-Ferrant, May 28 2024
-  </li>
-  <li>
-    <em>Odd Khovanov homology and higher representation theory</em>, EQuAL seminar, May 23 2024 (<a href="files/EQuAL-notes.pdf">notes</a>)
-  </li>
-  <li>
-    <em>Odd Khovanov homology and higher representation theory</em>, University of Oregon, algebra seminar, January 2024
-  </li>
-
-  <li>
-    <em>Odd Khovanov homology and higher representation theory</em>, JMM 2024: Special Session on Knots, Skein Modules, and Categorification, San Francisco, January 2024 (<a href=files/slides_JMM.pdf>slides</a>)
-  </li>
-
-  <li>
-    <i>Odd Khovanov homology and higher representation theory</i>,
-    Winter Braids in Tours, February 2023
-    (<a href=files/slides_WBXII.pdf>slides</a>, <a href=https://winterbraids.math.cnrs.fr/archive/winterbraids12/>link</a>)
-  </li>
-
- <li>
-   <i>Odd Khovanov homology and 2-supercategories</i>,
-   UCL-ULB-VUB seminar on quantum groups, Hopf algebras and monoidal categories, May 2022
-   (<a href=files/HAQG.pdf>slides</a>, <a href=https://hopfalgb.ulb.be/schedule.html>link</a>)
- </li>
-
- <li>
-   <i>Odd Khovanov Homology and Supercategorification</i>,
-   Winter Braids in Dijon, December 2021
-   (<a href=files/poster_winter_braids_XI.pdf>poster</a>)
- </li>
-
- <li>
-   <i>Supercategorification and odd Khovanov homology</i>,
-   séminaire de topologie algébrique in UCLouvain, October 2020
-   (<a href=files/UCLouvain-10-2020.pdf>slides</a>, <a href=https://uclouvain.be/fr/instituts-recherche/irmp/seminaires-de-topologie-algebrique.html#schelstraete>link</a>)
- </li>
-</ul>
-
-<h4>
-  Expository talks
-</h4>
-
-A selection of my expository talks:
-<ul>
-  <li>
-    <i>Out of line: a leisure tour on two-dimensional calculus</i>, UCLouvain, <a href="https://uclouvain.be/en/research-institutes/irmp/junior-colloquium.html">Junior Colloquium</a>, September 25 2024
-  </li>
-  <li>
-      <i>Comment calculer en deux dimensions ?</i>, Université libre de Bruxelles,  <a href="https://bssm.ulb.ac.be/fr/program.php">BSSM 2024</a>, August 29 2024
-    </i>
-  </li>
-  <li>
-    <i>Strictification and Gray categories</i>, Junior Category Theory Seminar, UCLouvain, February 2024, <a href="files/Strictification and Gray categories.pdf">companion notes</a>
-  </li>
-</ul>
-
-
-
+</html>
