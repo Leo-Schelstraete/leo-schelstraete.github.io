@@ -230,14 +230,17 @@ h1 + .entries { margin-top: 1.5rem; }
   color: var(--muted);
 }
 
-/* Chronological numbering: [1] is the oldest, so <ol reversed> counts down */
+/* Chronological numbering: [1] is the oldest, so the counter counts down.
+   A named counter is used because Chrome mishandles counter(list-item) on
+   <ol reversed> in ::before; the script in publications.html sets its start. */
 .pubs.numbered > li {
+  counter-increment: pub -1;
   position: relative;
   padding-left: 2.6rem;
 }
 
 .pubs.numbered > li::before {
-  content: "[" counter(list-item) "]";
+  content: "[" counter(pub) "]";
   position: absolute;
   left: 0;
   top: 0;
